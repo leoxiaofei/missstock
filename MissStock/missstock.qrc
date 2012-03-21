@@ -1,0 +1,20 @@
+<RCC>
+  <qresource prefix="MissStock">
+    <file>Resources/32x32/14.png</file>
+    <file>Resources/32x32/15.png</file>
+    <file>Resources/32x32/13.png</file>
+    <file>Resources/32x32/12.png</file>
+    <file>Resources/gnome-fs-desktop.png</file>
+    <file>Resources/32x32/11.png</file>
+    <file>Resources/32x32/1.png</file>
+    <file>Resources/32x32/2.png</file>
+    <file>Resources/32x32/3.png</file>
+    <file>Resources/32x32/4.png</file>
+    <file>Resources/32x32/5.png</file>
+    <file>Resources/32x32/6.png</file>
+    <file>Resources/32x32/7.png</file>
+    <file>Resources/32x32/8.png</file>
+    <file>Resources/32x32/9.png</file>
+    <file>Resources/32x32/10.png</file>
+  </qresource>
+</RCC>

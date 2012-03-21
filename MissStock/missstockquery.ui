@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MissStockQuery</class>
+ <widget class="QWidget" name="MissStockQuery">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>407</width>
+    <height>37</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MissStockQuery</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <property name="spacing">
+    <number>3</number>
+   </property>
+   <property name="margin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QLabel" name="lblDesc">
+     <property name="text">
+      <string>库存查询:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QComboBox" name="cboxCondition">
+     <item>
+      <property name="text">
+       <string>产品型号</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>序列号</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>货架号</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="edtValue"/>
+   </item>
+   <item>
+    <widget class="QComboBox" name="cBoxQueryType">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <item>
+      <property name="text">
+       <string>统计</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>详情</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="btnQuery">
+     <property name="text">
+      <string>查询</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btnQuery</sender>
+   <signal>clicked()</signal>
+   <receiver>MissStockQuery</receiver>
+   <slot>s_btnQuery()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>406</x>
+     <y>29</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>253</x>
+     <y>36</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>edtValue</sender>
+   <signal>returnPressed()</signal>
+   <receiver>btnQuery</receiver>
+   <slot>animateClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>211</x>
+     <y>22</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>406</x>
+     <y>26</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cBoxQueryType</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>MissStockQuery</receiver>
+   <slot>s_queryTypeChange(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>286</x>
+     <y>17</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>290</x>
+     <y>3</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>s_btnQuery()</slot>
+  <slot>s_queryTypeChange(int)</slot>
+ </slots>
+</ui>

@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MissStockClass</class>
+ <widget class="QMainWindow" name="MissStockClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>681</width>
+    <height>510</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>泓格通仓库管理系统（简易版）</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="0">
+     <widget class="QTableView" name="tvShow">
+      <property name="selectionMode">
+       <enum>QAbstractItemView::SingleSelection</enum>
+      </property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectRows</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QWidget" name="wgQueryOption" native="true">
+      <layout class="QGridLayout" name="glQueryOption">
+       <property name="margin">
+        <number>0</number>
+       </property>
+       <property name="spacing">
+        <number>0</number>
+       </property>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>681</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuBook">
+    <property name="title">
+     <string>登记</string>
+    </property>
+    <addaction name="actionPutin"/>
+    <addaction name="actionPutout"/>
+   </widget>
+   <widget class="QMenu" name="menuQuery">
+    <property name="title">
+     <string>查询</string>
+    </property>
+    <addaction name="actionCurrentStock"/>
+    <addaction name="actionLoanQuery"/>
+    <addaction name="actionHistoryQuery"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="actionExportExcel"/>
+   </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>高级</string>
+    </property>
+    <addaction name="actionModifyInfo"/>
+    <addaction name="actionModifyShelf"/>
+    <addaction name="action_2"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuBook"/>
+   <addaction name="menuQuery"/>
+   <addaction name="menu"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionPutin"/>
+   <addaction name="actionPutout"/>
+   <addaction name="separator"/>
+   <addaction name="actionCurrentStock"/>
+   <addaction name="actionLoanQuery"/>
+   <addaction name="actionHistoryQuery"/>
+   <addaction name="separator"/>
+   <addaction name="actionExportExcel"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionPutin">
+   <property name="icon">
+    <iconset resource="missstock.qrc">
+     <normaloff>:/MissStock/Resources/32x32/1.png</normaloff>:/MissStock/Resources/32x32/1.png</iconset>
+   </property>
+   <property name="text">
+    <string>入库</string>
+   </property>
+  </action>
+  <action name="actionPutout">
+   <property name="icon">
+    <iconset resource="missstock.qrc">
+     <normaloff>:/MissStock/Resources/32x32/2.png</normaloff>:/MissStock/Resources/32x32/2.png</iconset>
+   </property>
+   <property name="text">
+    <string>出库</string>
+   </property>
+  </action>
+  <action name="actionCurrentStock">
+   <property name="icon">
+    <iconset resource="missstock.qrc">
+     <normaloff>:/MissStock/Resources/32x32/15.png</normaloff>:/MissStock/Resources/32x32/15.png</iconset>
+   </property>
+   <property name="text">
+    <string>库存查询</string>
+   </property>
+   <property name="toolTip">
+    <string>库存查询</string>
+   </property>
+  </action>
+  <action name="actionLoanQuery">
+   <property name="icon">
+    <iconset resource="missstock.qrc">
+     <normaloff>:/MissStock/Resources/32x32/14.png</normaloff>:/MissStock/Resources/32x32/14.png</iconset>
+   </property>
+   <property name="text">
+    <string>外借查询</string>
+   </property>
+  </action>
+  <action name="actionHistoryQuery">
+   <property name="icon">
+    <iconset resource="missstock.qrc">
+     <normaloff>:/MissStock/Resources/32x32/13.png</normaloff>:/MissStock/Resources/32x32/13.png</iconset>
+   </property>
+   <property name="text">
+    <string>历史查询</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="icon">
+    <iconset resource="missstock.qrc">
+     <normaloff>:/MissStock/Resources/32x32/11.png</normaloff>:/MissStock/Resources/32x32/11.png</iconset>
+   </property>
+   <property name="text">
+    <string>关于</string>
+   </property>
+  </action>
+  <action name="actionExportExcel">
+   <property name="icon">
+    <iconset resource="missstock.qrc">
+     <normaloff>:/MissStock/Resources/32x32/12.png</normaloff>:/MissStock/Resources/32x32/12.png</iconset>
+   </property>
+   <property name="text">
+    <string>导出Excel</string>
+   </property>
+  </action>
+  <action name="actionModifyInfo">
+   <property name="text">
+    <string>修改产品信息</string>
+   </property>
+  </action>
+  <action name="actionModifyShelf">
+   <property name="text">
+    <string>修改货架</string>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="text">
+    <string>删除错误的入库</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="missstock.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionPutin</sender>
+   <signal>triggered()</signal>
+   <receiver>MissStockClass</receiver>
+   <slot>s_actionPutin()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>328</x>
+     <y>289</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionPutout</sender>
+   <signal>triggered()</signal>
+   <receiver>MissStockClass</receiver>
+   <slot>s_actionPutout()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>328</x>
+     <y>289</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionCurrentStock</sender>
+   <signal>triggered()</signal>
+   <receiver>MissStockClass</receiver>
+   <slot>s_actionCurrentStock()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>328</x>
+     <y>289</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionLoanQuery</sender>
+   <signal>triggered()</signal>
+   <receiver>MissStockClass</receiver>
+   <slot>s_actionLoanQuery()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>324</x>
+     <y>272</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionHistoryQuery</sender>
+   <signal>triggered()</signal>
+   <receiver>MissStockClass</receiver>
+   <slot>s_actionHistoryQuery()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>340</x>
+     <y>254</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionAbout</sender>
+   <signal>triggered()</signal>
+   <receiver>MissStockClass</receiver>
+   <slot>s_actionAbout()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>340</x>
+     <y>254</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionExportExcel</sender>
+   <signal>triggered()</signal>
+   <receiver>MissStockClass</receiver>
+   <slot>s_actionExportExcel()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>340</x>
+     <y>254</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tvShow</sender>
+   <signal>doubleClicked(QModelIndex)</signal>
+   <receiver>MissStockClass</receiver>
+   <slot>s_copyModelData(QModelIndex)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>162</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>234</x>
+     <y>76</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionModifyInfo</sender>
+   <signal>triggered()</signal>
+   <receiver>MissStockClass</receiver>
+   <slot>s_actionModifyInfo()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>340</x>
+     <y>254</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionModifyShelf</sender>
+   <signal>triggered()</signal>
+   <receiver>MissStockClass</receiver>
+   <slot>s_actionModifyShelf()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>340</x>
+     <y>254</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>s_actionPutin()</slot>
+  <slot>s_actionPutout()</slot>
+  <slot>s_actionCurrentStock()</slot>
+  <slot>s_actionLoanQuery()</slot>
+  <slot>s_actionHistoryQuery()</slot>
+  <slot>s_actionAbout()</slot>
+  <slot>s_actionExportExcel()</slot>
+  <slot>s_copyModelData(QModelIndex)</slot>
+  <slot>s_actionModifyInfo()</slot>
+  <slot>s_actionModifyShelf()</slot>
+ </slots>
+</ui>
