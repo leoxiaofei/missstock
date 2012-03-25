@@ -75,18 +75,25 @@
     </property>
     <addaction name="actionExportExcel"/>
    </widget>
-   <widget class="QMenu" name="menu">
+   <widget class="QMenu" name="menuAdvance">
     <property name="title">
      <string>高级</string>
     </property>
     <addaction name="actionModifyInfo"/>
     <addaction name="actionModifyShelf"/>
-    <addaction name="action_2"/>
+    <addaction name="actionDeleteRecord"/>
+   </widget>
+   <widget class="QMenu" name="menuUserManager">
+    <property name="title">
+     <string>账户管理</string>
+    </property>
+    <addaction name="actionModifyUserPass"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuBook"/>
    <addaction name="menuQuery"/>
-   <addaction name="menu"/>
+   <addaction name="menuAdvance"/>
+   <addaction name="menuUserManager"/>
    <addaction name="menuHelp"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
@@ -176,18 +183,39 @@
    </property>
   </action>
   <action name="actionModifyInfo">
+   <property name="icon">
+    <iconset resource="missstock.qrc">
+     <normaloff>:/MissStock/Resources/32x32/6.png</normaloff>:/MissStock/Resources/32x32/6.png</iconset>
+   </property>
    <property name="text">
     <string>修改产品信息</string>
    </property>
   </action>
   <action name="actionModifyShelf">
+   <property name="icon">
+    <iconset resource="missstock.qrc">
+     <normaloff>:/MissStock/Resources/32x32/5.png</normaloff>:/MissStock/Resources/32x32/5.png</iconset>
+   </property>
    <property name="text">
     <string>修改货架</string>
    </property>
   </action>
-  <action name="action_2">
+  <action name="actionDeleteRecord">
+   <property name="icon">
+    <iconset resource="missstock.qrc">
+     <normaloff>:/MissStock/Resources/32x32/3.png</normaloff>:/MissStock/Resources/32x32/3.png</iconset>
+   </property>
    <property name="text">
-    <string>删除错误的入库</string>
+    <string>删除产品记录</string>
+   </property>
+  </action>
+  <action name="actionModifyUserPass">
+   <property name="icon">
+    <iconset resource="missstock.qrc">
+     <normaloff>:/MissStock/Resources/preferences-contact-list.png</normaloff>:/MissStock/Resources/preferences-contact-list.png</iconset>
+   </property>
+   <property name="text">
+    <string>当前用户</string>
    </property>
   </action>
  </widget>
@@ -356,6 +384,38 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>actionDeleteRecord</sender>
+   <signal>triggered()</signal>
+   <receiver>MissStockClass</receiver>
+   <slot>s_actionDeleteRecord()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>340</x>
+     <y>254</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionModifyUserPass</sender>
+   <signal>triggered()</signal>
+   <receiver>MissStockClass</receiver>
+   <slot>s_actionModifyUserPass()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>340</x>
+     <y>254</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>s_actionPutin()</slot>
@@ -368,5 +428,7 @@
   <slot>s_copyModelData(QModelIndex)</slot>
   <slot>s_actionModifyInfo()</slot>
   <slot>s_actionModifyShelf()</slot>
+  <slot>s_actionDeleteRecord()</slot>
+  <slot>s_actionModifyUserPass()</slot>
  </slots>
 </ui>

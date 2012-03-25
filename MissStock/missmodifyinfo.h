@@ -13,7 +13,13 @@ public:
     ~MissModifyInfo();
 
 public slots:
+    void accept();
     void s_changeName(int nIndex);
+    void s_checkNameE();
+    void s_checkNameR();
+
+protected:
+    bool checkForm(QString& strReason);
 
 private:
     Ui::MissModifyInfo ui;

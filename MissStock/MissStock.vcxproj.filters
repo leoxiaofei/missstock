@@ -140,6 +140,36 @@
     <ClCompile Include="GeneratedFiles\Release\moc_missmodifyshelf.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
+    <ClCompile Include="missdeleterecord.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_missdeleterecord.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_missdeleterecord.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="misslogin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_misslogin.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_misslogin.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="MissTools.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="missmodifyuserpass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_missmodifyuserpass.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_missmodifyuserpass.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -176,6 +206,18 @@
       <Filter>Generated Files</Filter>
     </ClInclude>
     <ClInclude Include="GeneratedFiles\ui_missmodifyshelf.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_missdeleterecord.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_misslogin.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MissTools.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_missmodifyuserpass.h">
       <Filter>Generated Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -238,6 +280,24 @@
       <Filter>Header Files</Filter>
     </CustomBuild>
     <CustomBuild Include="missmodifyshelf.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="missdeleterecord.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="missdeleterecord.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="misslogin.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="misslogin.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="missmodifyuserpass.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="missmodifyuserpass.ui">
       <Filter>Form Files</Filter>
     </CustomBuild>
   </ItemGroup>

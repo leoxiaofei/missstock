@@ -142,8 +142,42 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>edtError</sender>
+   <signal>editingFinished()</signal>
+   <receiver>MissModifyInfo</receiver>
+   <slot>s_checkNameE()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>220</x>
+     <y>25</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>275</x>
+     <y>24</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>edtName</sender>
+   <signal>editingFinished()</signal>
+   <receiver>MissModifyInfo</receiver>
+   <slot>s_checkNameR()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>228</x>
+     <y>39</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>272</x>
+     <y>58</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>s_changeName(int)</slot>
+  <slot>s_checkNameE()</slot>
+  <slot>s_checkNameR()</slot>
  </slots>
 </ui>
