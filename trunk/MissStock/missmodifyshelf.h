@@ -12,6 +12,14 @@ public:
     MissModifyShelf(QWidget *parent = 0);
     ~MissModifyShelf();
 
+protected:
+    bool checkForm(QString& strReason);
+    
+public slots:
+    virtual void accept();
+    void s_cboxNameChanged(int nIndex);
+    void s_queryData();
+
 private:
     Ui::MissModifyShelf ui;
 };

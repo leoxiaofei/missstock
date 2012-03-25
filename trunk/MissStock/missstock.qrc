@@ -1,6 +1,8 @@
 <RCC>
   <qresource prefix="MissStock">
+    <file>Resources/preferences-contact-list.png</file>
     <file>Resources/32x32/14.png</file>
+    <file>Resources/user_info.png</file>
     <file>Resources/32x32/15.png</file>
     <file>Resources/32x32/13.png</file>
     <file>Resources/32x32/12.png</file>

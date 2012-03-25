@@ -24,6 +24,8 @@ public slots:
     void s_actionAbout();
     void s_actionModifyInfo();
     void s_actionModifyShelf();
+    void s_actionDeleteRecord();
+    void s_actionModifyUserPass();
     void s_actionExportExcel();
     void s_optionQuery(const QSqlQuery& sqlQuery, const std::vector<QString>& vecHeader);
     void s_copyModelData(QModelIndex index);

@@ -11,14 +11,17 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MissModifyShelf</string>
+   <string>修改货架号</string>
   </property>
   <layout class="QFormLayout" name="formLayout">
    <property name="sizeConstraint">
     <enum>QLayout::SetFixedSize</enum>
    </property>
    <item row="0" column="0">
-    <widget class="QComboBox" name="comboBox">
+    <widget class="QComboBox" name="cBoxName">
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
      <item>
       <property name="text">
        <string>产品型号</string>
@@ -32,36 +35,39 @@
     </widget>
    </item>
    <item row="0" column="1">
-    <widget class="QLineEdit" name="lineEdit"/>
+    <widget class="QLineEdit" name="edtName"/>
    </item>
    <item row="1" column="0">
-    <widget class="QLabel" name="label">
+    <widget class="QLabel" name="lblCurrentShelf">
      <property name="text">
-      <string>TextLabel</string>
+      <string>当前货架号:</string>
      </property>
     </widget>
    </item>
    <item row="1" column="1">
-    <widget class="QLineEdit" name="lineEdit_2">
+    <widget class="QLineEdit" name="edtCurrentShelf">
      <property name="readOnly">
       <bool>true</bool>
      </property>
     </widget>
    </item>
    <item row="3" column="0">
-    <widget class="QLabel" name="label_2">
+    <widget class="QLabel" name="lblShelf">
      <property name="text">
-      <string>TextLabel</string>
+      <string>修改后:</string>
      </property>
     </widget>
    </item>
    <item row="3" column="1">
-    <widget class="QLineEdit" name="lineEdit_3"/>
+    <widget class="QLineEdit" name="edtModifyShelf"/>
    </item>
    <item row="4" column="0">
-    <widget class="QLabel" name="label_3">
+    <widget class="QLabel" name="lblDesc">
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 0, 0);</string>
+     </property>
      <property name="text">
-      <string>TextLabel</string>
+      <string>批量</string>
      </property>
     </widget>
    </item>
@@ -76,5 +82,74 @@
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>cBoxName</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>MissModifyShelf</receiver>
+   <slot>s_cboxNameChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>46</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>44</x>
+     <y>121</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>edtName</sender>
+   <signal>editingFinished()</signal>
+   <receiver>MissModifyShelf</receiver>
+   <slot>s_queryData()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>126</x>
+     <y>10</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>76</x>
+     <y>119</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>MissModifyShelf</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>179</x>
+     <y>108</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>183</x>
+     <y>129</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>MissModifyShelf</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>151</x>
+     <y>107</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>155</x>
+     <y>140</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>s_cboxNameChanged(int)</slot>
+  <slot>s_queryData()</slot>
+ </slots>
 </ui>

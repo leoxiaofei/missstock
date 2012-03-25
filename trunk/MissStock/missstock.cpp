@@ -15,6 +15,9 @@
 #include "missabout.h"
 #include "missqtexcel.h"
 #include "missmodifyinfo.h"
+#include "missmodifyshelf.h"
+#include "missdeleterecord.h"
+#include "missmodifyuserpass.h"
 
 class MissStock::MissStockImpl
 {
@@ -32,6 +35,7 @@ MissStock::MissStock(QWidget *parent, Qt::WFlags flags)
 {
     ui.setupUi(this);
     ui.tvShow->setModel(&m_pImpl->m_tableModel);
+    ui.menuAdvance->setEnabled(MissGlobal::userInfo.strRight == "1");
     s_actionCurrentStock();
 }
 
@@ -164,5 +168,15 @@ void MissStock::s_actionModifyInfo()
 void MissStock::s_actionModifyShelf()
 {
     MissModifyShelf ().exec();
+}
+
+void MissStock::s_actionDeleteRecord()
+{
+    MissDeleteRecord ().exec();
+}
+
+void MissStock::s_actionModifyUserPass()
+{
+    MissModifyUserPass ().exec();
 }
 
